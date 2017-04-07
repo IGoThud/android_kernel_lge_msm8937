@@ -119,11 +119,6 @@ config CPU_FREQ_DEFAULT_GOV_HYPERX
         help
         Use the CPUFreq governor 'hyperx' as default.
 
-
-
-
-
-
 config CPU_FREQ_DEFAULT_GOV_INTERACTIVE
 	bool "interactive"
 	select CPU_FREQ_GOV_INTERACTIVE
@@ -206,6 +201,12 @@ config CPU_FREQ_GOV_INTERACTIVE
 	  For details, take a look at linux/Documentation/cpu-freq.
 
 	  If in doubt, say N.
+
+config CPU_FREQ_GOV_HYPERX
+          tristate "'hyperx' cpufreq governor"
+          depends on CPU_FREQ
+          help
+          'hyperx' - a "hyper" optimized governor!
 
 config CPU_FREQ_GOV_CONSERVATIVE
 	tristate "'conservative' cpufreq governor"
